@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Chapter notes">
+  <rect width="160" height="160" fill="#f3f4f8"/>
+  <rect x="32" y="22" width="96" height="116" rx="6" fill="#ffffff" stroke="#d8dbe5" stroke-width="2"/>
+  <rect x="32" y="22" width="8" height="116" rx="3" fill="#4d74eb"/>
+  <line x1="54" y1="54" x2="112" y2="54" stroke="#c9cedd" stroke-width="3" stroke-linecap="round"/>
+  <line x1="54" y1="72" x2="112" y2="72" stroke="#dde0e8" stroke-width="3" stroke-linecap="round"/>
+  <line x1="54" y1="90" x2="96" y2="90" stroke="#dde0e8" stroke-width="3" stroke-linecap="round"/>
+  <line x1="54" y1="108" x2="104" y2="108" stroke="#dde0e8" stroke-width="3" stroke-linecap="round"/>
+</svg>

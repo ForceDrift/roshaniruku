@@ -1,0 +1,58 @@
+<header id="topbar-wrapper" class="flex-shrink-0" aria-label="Top Bar">
+  <div id="topbar" class="d-flex align-items-center justify-content-between h-100">
+    <a class="navbar-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="{{ '/archives/' | relative_url }}">Blog</a>
+      <a href="{{ '/books-read/' | relative_url }}">Books Read</a>
+    </nav>
+
+    <div class="nav-actions">
+      {% if site.github.username %}
+        <a class="nav-social" href="https://github.com/{{ site.github.username }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      {% endif %}
+
+      {% if site.twitter.username %}
+        <a class="nav-social" href="https://x.com/{{ site.twitter.username }}" target="_blank" rel="noopener noreferrer" aria-label="X">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+      {% endif %}
+
+      {% if site.linkedin.username %}
+        <a class="nav-social" href="https://www.linkedin.com/in/{{ site.linkedin.username }}/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      {% endif %}
+
+      <button type="button" id="sidebar-trigger" class="btn btn-link d-none" aria-label="Sidebar">
+        <i class="fas fa-bars fa-fw"></i>
+      </button>
+
+      <div id="topbar-title" class="d-none"></div>
+
+      <div class="d-none">
+        <button type="button" id="search-trigger" class="btn btn-link" aria-label="Search">
+          <i class="fas fa-search fa-fw"></i>
+        </button>
+
+        <search id="search" class="align-items-center">
+          <i class="fas fa-search fa-fw"></i>
+          <input
+            class="form-control"
+            id="search-input"
+            type="search"
+            aria-label="search"
+            autocomplete="off"
+            placeholder="{{ site.data.locales[include.lang].search.hint | capitalize }}..."
+          >
+        </search>
+
+        <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">
+          {{- site.data.locales[include.lang].search.cancel -}}
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

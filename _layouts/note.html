@@ -1,0 +1,49 @@
+---
+layout: default
+panel_includes:
+  - note-toc
+---
+
+{% include lang.html %}
+
+<article class="px-1 note-article" data-toc="true">
+  <header class="note-header">
+    <h1 class="dynamic-title" data-toc-skip>{{ page.title }}</h1>
+    <div class="note-meta text-muted">
+      {% if page.date %}
+        <span>Posted {{ page.date | date: '%b %-d, %Y' }}</span>
+      {% endif %}
+      {% if page.last_modified_at %}
+        <span>Updated {{ page.last_modified_at | date: '%b %-d, %Y' }}</span>
+      {% endif %}
+      <span>By {{ page.author | default: site.social.name }}</span>
+      <span>{{ page.read_time | default: '5 min' }} read</span>
+    </div>
+  </header>
+  <div class="content">
+    {{ content }}
+  </div>
+</article>
+
+<script src="{{ site.data.origin[site.origin].toc.js | default: site.data.origin.cors.toc.js | relative_url }}"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var wrapper = document.getElementById('toc-wrapper');
+
+    if (window.tocbot) {
+      tocbot.init({
+        tocSelector: '#toc',
+        contentSelector: '.note-article .content',
+        ignoreSelector: '[data-toc-skip]',
+        headingSelector: 'h2, h3, h4',
+        orderedList: false,
+        scrollSmooth: true,
+        headingsOffset: 32
+      });
+    }
+
+    if (wrapper) {
+      wrapper.classList.remove('invisible');
+    }
+  });
+</script>

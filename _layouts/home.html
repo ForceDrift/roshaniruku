@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div class="chip-home">
+  <section class="chip-bio">
+    <p>
+      This is where I collect notes, ideas, and experiments from the intersection of
+      systems programming and machine learning.
+    </p>
+  </section>
+
+  <section class="chip-highlights">
+    <ul>
+      <li><strong>Modern C++:</strong> performance, design, and systems-level thinking.</li>
+      <li><strong>Deep learning:</strong> models, training, and practical applications.</li>
+      <li><strong>Writing:</strong> notes and deep dives on both topics.</li>
+    </ul>
+  </section>
+
+  {% assign recent = site.posts | limit: 5 %}
+  {% if recent.size > 0 %}
+    <section class="chip-writing">
+      <h2>Blog</h2>
+      <ul>
+        {% for post in recent %}
+          <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <span>{{ post.date | date: '%b %Y' }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+      <a class="chip-more" href="{{ '/archives/' | relative_url }}">All posts &rarr;</a>
+    </section>
+  {% endif %}
+
+  <footer class="chip-links">
+    {% for link in site.social.links %}
+      <a href="{{ link }}">{{ link | remove: 'https://' | remove: 'http://' | remove: 'www.' | split: '/' | first }}</a>
+    {% endfor %}
+    {% if site.social.email and site.social.email != empty %}
+      <a href="mailto:{{ site.social.email }}">Email</a>
+    {% endif %}
+  </footer>
+</div>

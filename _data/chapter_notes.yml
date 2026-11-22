@@ -1,0 +1,12 @@
+- date: "Feb 9, 2025"
+  read_time: "12 min"
+  title: "Introduction"
+  subtitle: "Why statistical learning matters and how to frame a prediction problem."
+  image: "/assets/img/chapter-notes/intro-cover.png"
+  aspect: "1082 / 394"
+  link: "/books/introduction-to-statistical-learning/introduction/"
+
+- date: "TBD"
+  read_time: "7 min"
+  title: "Statistical Learning"
+  subtitle: "Supervised learning, unsupervised learning, and the bias-variance tradeoff."
