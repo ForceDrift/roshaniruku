@@ -70,20 +70,70 @@ body:has(.chip-home) {
     }
   }
 
+  .chip-profile {
+    padding-top: 0.75rem;
+    margin-bottom: 2.5rem;
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .chip-avatar {
+      position: relative;
+      float: right;
+      width: 200px;
+      height: 200px;
+      margin: 0 0 0.75rem 1.5rem;
+      overflow: hidden;
+      border-radius: 50%;
+      shape-outside: circle(50%);
+      shape-margin: 0.5rem;
+      background-color: var(--border-color, #f5f5f5);
+      border: 1px solid var(--border-color, #e8e8e8);
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("{{ '/assets/img/profile.jpg' | relative_url }}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: rotate(90deg);
+      }
+    }
+  }
+
   .chip-bio p {
     margin-bottom: 1.25rem;
+  }
+
+  .chip-bio.chip-intro p {
+    margin-bottom: 0.9rem;
+  }
+
+  .chip-bio.chip-intro p:last-child {
+    margin-bottom: 0;
   }
 
   .chip-highlights {
     margin: 2.5rem 0;
 
-    ul {
-      list-style: none;
-      padding-left: 0;
+    h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 1.5rem 0 0.35rem;
     }
 
-    li {
-      margin-bottom: 0.5rem;
+    h2:first-child {
+      margin-top: 0;
+    }
+
+    p {
+      margin-bottom: 0;
+      color: var(--text-muted-color, var(--text-color));
     }
   }
 
@@ -262,6 +312,15 @@ a {
   .main-nav,
   .nav-actions {
     justify-self: center;
+  }
+
+  .chip-profile {
+    .chip-avatar {
+      width: 140px;
+      height: 140px;
+      margin-left: 1rem;
+      shape-margin: 0.35rem;
+    }
   }
 }
 

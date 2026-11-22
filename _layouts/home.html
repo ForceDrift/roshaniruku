@@ -3,19 +3,22 @@ layout: default
 ---
 
 <div class="chip-home">
-  <section class="chip-bio">
-    <p>
-      This is where I collect notes, ideas, and experiments from the intersection of
-      systems programming and machine learning.
-    </p>
+  <section class="chip-profile">
+    <span class="chip-avatar" role="img" aria-label="Roshan Iruku"></span>
+    <div class="chip-bio chip-intro">
+      <p>Hi, I'm Roshan, a machine learning researcher and systems programmer interested in building high-performance software and exploring ideas at the bridge between systems and artificial intelligence.</p>
+      <p>My work spans modern C++, deep learning, and systems research, with a particular interest in challenging engineering problems, performance, and novel approaches to computing.</p>
+      <p>I'm currently studying Computer Science at the <a href="https://www.uoguelph.ca/" target="_blank" rel="noopener">University of Guelph</a> and serve on the <a href="https://isocpp.org/std/the-committee" target="_blank" rel="noopener">ISO C++ committee</a>, contributing to the evolution of the C++ programming language.</p>
+      <p>Feel free to explore my work or get in touch through the provided links.</p>
+    </div>
   </section>
 
   <section class="chip-highlights">
-    <ul>
-      <li><strong>Modern C++:</strong> performance, design, and systems-level thinking.</li>
-      <li><strong>Deep learning:</strong> models, training, and practical applications.</li>
-      <li><strong>Writing:</strong> notes and deep dives on both topics.</li>
-    </ul>
+    <h2>Technical Interests</h2>
+    <p>Modern C++ (C++26), reflection, high-performance computing, GPU programming, concurrency and parallelism, distributed systems.</p>
+
+    <h2>Research Interests</h2>
+    <p>3D Gaussian Splatting, large language model quantization, transformer architectures, reinforcement learning, high-performance deep learning, and autonomous systems.</p>
   </section>
 
   {% assign recent = site.posts | limit: 5 %}
