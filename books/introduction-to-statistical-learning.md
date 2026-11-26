@@ -10,6 +10,7 @@ permalink: /books/introduction-to-statistical-learning/
   <div class="book-links">
     <a href="https://www.statlearning.com/" target="_blank" rel="noopener noreferrer">Official book website</a>
     <a href="https://hastie.su.domains/ISLR2/ISLRv2_corrected_June_2023.pdf.download.html" target="_blank" rel="noopener noreferrer">Read the PDF</a>
+    <a href="#" aria-disabled="true">Exercise code</a>
   </div>
 </div>
 
