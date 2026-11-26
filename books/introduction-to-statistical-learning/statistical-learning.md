@@ -189,11 +189,15 @@ b) Real estate price estimation with predictors such as square footage, number o
 
 ## Important things to know
 
-- The advantage of a very flexible approach for regression or classification is that we can model complex non-linear relationships and fit a wider range of functions $f$.
-- The disadvantage is that very flexible models can overfit observations or fit irreducible error or noise rather than the true underlying pattern $f$. As a result, they often perform well on training data but fail badly on test data.
-- Less flexible models are great for fitting data with many predictors and fewer observations, as the model does not overfit the training data or noise. Lowering flexibility typically raises bias but lowers variance.
-- Parametric methods use a fixed number of parameters and assume a predefined functional form, which means they can learn with a smaller training sample. They are usually very interpretable, making the weights $\beta_i$ easy to explain.
-- Non-parametric methods are good for estimating complex non-linear $f$ because they do not restrict the model to following a strict functional form. Instead of forcing data into a rigid line or polynomial, they adapt to irregular local patterns.
+The advantage of a very flexible approach for regression or classification is that we can model complex non-linear relationships and fit a wider range of functions $f$.
+
+The disadvantage is that very flexible models can overfit observations or fit irreducible error or noise rather than the true underlying pattern $f$. As a result, they often perform well on training data but fail badly on test data.
+
+Less flexible models are great for fitting data with many predictors and fewer observations, as the model does not overfit the training data or noise. Lowering flexibility typically raises bias but lowers variance.
+
+Parametric methods use a fixed number of parameters and assume a predefined functional form, which means they can learn with a smaller training sample. They are usually very interpretable, making the weights $\beta_i$ easy to explain.
+
+Non-parametric methods are good for estimating complex non-linear $f$ because they do not restrict the model to following a strict functional form. Instead of forcing data into a rigid line or polynomial, they adapt to irregular local patterns.
 
 ### Code
 

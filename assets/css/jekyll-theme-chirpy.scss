@@ -537,7 +537,7 @@ body:has(.note-article) {
     max-width: 40rem !important;
     margin: 0 !important;
     padding-right: 0.75rem !important;
-    font-size: 0.7rem;
+    font-size: 0.875rem;
     line-height: 1.5;
   }
 
@@ -554,7 +554,7 @@ body:has(.note-article) {
     display: block !important;
     max-width: 18rem;
     padding-left: 0.5rem;
-    font-size: 0.72rem;
+    font-size: 0.9rem;
 
     .access {
       display: none !important;
@@ -565,7 +565,7 @@ body:has(.note-article) {
     }
 
     .toc-link {
-      font-size: 0.74rem;
+      font-size: 0.925rem;
     }
   }
 
@@ -575,7 +575,7 @@ body:has(.note-article) {
 
     h1.dynamic-title {
       margin: 0 0 0.4rem;
-      font-size: 1.7rem;
+      font-size: 2.125rem;
       line-height: 1.2;
     }
   }
@@ -584,67 +584,67 @@ body:has(.note-article) {
     display: flex;
     flex-wrap: wrap;
     gap: 0.25rem 0.75rem;
-    font-size: 0.64rem;
+    font-size: 0.8rem;
     color: var(--text-muted-color, #828282);
   }
 
   .note-article {
     .content p {
-      margin-bottom: 0.8rem;
-      font-size: 0.68rem;
+      margin-bottom: 1rem;
+      font-size: 0.85rem;
     }
 
     h2 {
       margin: 2rem 0 0.6rem;
-      font-size: 1rem;
+      font-size: 1.25rem;
     }
 
     h3 {
       margin: 1.5rem 0 0.4rem;
-      font-size: 0.9rem;
+      font-size: 1.125rem;
     }
 
     mjx-container {
-      font-size: 0.8em !important;
+      font-size: 1em !important;
     }
 
     .highlighter-rouge {
       margin: 0.8rem 0 1.25rem;
-      font-size: 0.72rem;
+      font-size: 0.9rem;
     }
 
     .code-header {
-      height: 1.85rem;
+      height: 2.3rem;
       margin-left: 0.6rem;
       padding: 0 0.45rem;
 
       span {
-        line-height: 1.85rem;
+        line-height: 2.3rem;
         margin-left: -0.575rem;
 
         i {
           width: 1rem;
-          font-size: 0.8rem;
+          font-size: 1rem;
         }
 
         &::after {
-          font-size: 0.72rem;
+          font-size: 0.9rem;
         }
       }
 
       button {
-        width: 1.6rem;
-        height: 1.6rem;
+        width: 2rem;
+        height: 2rem;
 
         i {
-          font-size: 0.8rem;
+          font-size: 1rem;
         }
       }
     }
 
     .highlight pre {
       padding: 0.5rem;
-      font-size: 0.75rem !important;
+      font-size: 0.9375rem !important;
       line-height: 1.4 !important;
     }
 
