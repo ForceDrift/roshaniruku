@@ -45,5 +45,37 @@ panel_includes:
     if (wrapper) {
       wrapper.classList.remove('invisible');
     }
+
+    var mathRetries = 0;
+
+    function typesetMath() {
+      if (!window.MathJax || !window.MathJax.typesetPromise) {
+        if (mathRetries++ < 100) {
+          setTimeout(typesetMath, 50);
+        }
+        return;
+      }
+
+      var ready = window.MathJax.startup && window.MathJax.startup.promise
+        ? window.MathJax.startup.promise
+        : Promise.resolve();
+
+      ready.then(function () {
+        if (!window.MathJax.typesetPromise) {
+          return;
+        }
+
+        var targets = [
+          document.querySelector('.note-article'),
+          document.getElementById('toc')
+        ].filter(Boolean);
+
+        Promise.all(targets.map(function (target) {
+          return window.MathJax.typesetPromise([target]);
+        }));
+      });
+    }
+
+    typesetMath();
   });
 </script>
